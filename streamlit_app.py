@@ -37,7 +37,7 @@ def fetch_ds(datastreams_id):
     return(response)
 ######################################################################################################################################
 
-st.title('Adverity usual tasks')
+st.title('PYMES GURU')
 
 st.dataframe(dataframe.style.highlight_max(axis=0))
 
