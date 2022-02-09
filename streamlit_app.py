@@ -41,7 +41,7 @@ st.title('PYMES GURU')
 
 st.dataframe(dataframe.style.highlight_max(axis=0))
 
-st.write('última actualización de kwin')
+st.write('última actualización de datos')
 data_load_state = st.text('Loading data...')
 data = load_data(1000)
 data_load_state.text("Done! (using st.cache)")
