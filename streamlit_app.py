@@ -34,9 +34,9 @@ def fetch_ds(datastreams_id):
     return(response)
 ######################################################################################################################################
 
-st.title('PYMES GURU')
+st.title('Sorteo de fin de año')
 
-st.dataframe(dataframe.style.highlight_max(axis=0))
+st.dataframe(data.style.highlight_max(axis=0))
 
 st.write('última actualización de datos')
 data_load_state = st.text('Loading data...')
