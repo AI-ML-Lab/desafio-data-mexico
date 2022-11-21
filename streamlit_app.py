@@ -9,7 +9,7 @@ import pandas as pd
 #import graphviz as graphviz
 ######################################################################################################################################
 DATE_COLUMN = 'daily'
-DATA_URL = ('https://testingmidktbo.s3.amazonaws.com/stagging.csv')
+DATA_URL = ('https://waop.s3.amazonaws.com/sort.csv')
 #datastreams_id = [6,63,101,89,98,97,99]
 datastreams_id = []
 dataframe = pd.DataFrame(
@@ -19,9 +19,6 @@ dataframe = pd.DataFrame(
 @st.cache
 def load_data(nrows):
     data = pd.read_csv(DATA_URL, nrows=nrows)
-    lowercase = lambda x: str(x).lower()
-    data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
-    data.rename(lowercase, axis='columns', inplace=True)
     return data
 
 def fetch_ds(datastreams_id):
